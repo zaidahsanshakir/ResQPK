@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comments - Emergency Help</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .comment-box {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 15px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      text-align: left;
+    }
+    .comment-box textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      resize: none;
+    }
+    .comment-box button {
+      margin-top: 10px;
+      background: #1565c0;
+      color: #fff;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .comment-box button:hover {
+      background: #0d47a1;
+    }
+    .comments-list {
+      margin-top: 20px;
+    }
+    .comment {
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="emergency.html">Emergency Numbers</a>
+    <a href="comment.html">Comments</a>
+  </div>
+
+  <!-- Hamburger button -->
+  <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+
+  <header>💬 Comments</header>
+
+  <main>
+    <h1>Leave Your Feedback</h1>
+    <div class="comment-box">
+      <textarea id="commentInput" rows="4" placeholder="Write your comment here..."></textarea>
+      <button onclick="addComment()">Submit</button>
+      <div class="comments-list" id="commentsList"></div>
+    </div>
+  </main>
+
+  <footer>&copy; 2025 Emergency Service</footer>
+
+  <script>
+    function addComment() {
+      const input = document.getElementById("commentInput");
+      if (input.value.trim() !== "") {
+        const newComment = document.createElement("div");
+        newComment.className = "comment";
+        newComment.innerText = input.value;
+        document.getElementById("commentsList").appendChild(newComment);
+        input.value = "";
+      }
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

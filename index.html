@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emergency Help</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="emergency.html">Emergency Numbers</a>
+    <a href="comment.html">Comments</a>
+   
+  </div>
+
+  <!-- Hamburger button -->
+  <div class="menu-btn" onclick="toggleSidebar()">☰</div>
+
+  <header>
+    🚨 Emergency Help Center
+  </header>
+
+  <main>
+    <h1>Welcome to the Emergency Help Center</h1>
+    <p>Your safety is our priority. Select the service you need and help will be on the way instantly.</p>
+
+    <div class="buttons">
+      <button class="ambulance" onclick="location.href='ambulance.html'">🚑 Call Ambulance</button>
+      <button class="fire" onclick="location.href='fire.html'">🔥 Call Fire Brigade</button>
+      <button class="police" onclick="location.href='police.html'">🚓 Call Police</button>
+      <button class="rescue" onclick="location.href='rescue.html'">🛟 Call Rescue</button>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Emergency Service | Fake calls will be tracked 🚫
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🚑 Ambulance Service</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body>
+
+
+  <header>🚑 Ambulance Service</header>
+
+  <main>
+    <!-- Step 1: Booking Form -->
+    <div id="booking">
+      <h2>Book an Ambulance</h2>
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="text" id="contact" placeholder="Contact Number" required>
+
+      <!-- OTP Section -->
+      <div id="otpSection">
+        <button class="ambulance" onclick="sendOTP()">📩 Verify Number</button>
+        <p id="otpMessage" class="hidden">Your OTP is: <b>1234</b></p>
+        <input type="text" id="otpInput" placeholder="Enter OTP">
+        <button class="ambulance" onclick="verifyOTP()">✅ Confirm OTP</button>
+      </div>
+
+      <button class="ambulance" onclick="bookService('ambulance')" id="bookBtn" disabled>
+        🚑 Book Ambulance
+      </button>
+    </div>
+
+    <!-- Step 2: Details -->
+    <div id="details" class="hidden">
+      <h3>🚑 Ambulance is on the way!</h3>
+      <p><b>Driver:</b> <span id="driverName"></span></p>
+      <p><b>Ambulance:</b> <span id="vehicleBrand"></span></p>
+      <p><b>Arrival in:</b> <span id="timer"></span></p>
+
+      <div id="map"></div>
+
+      <div class="buttons">
+        <button class="call" onclick="callDriver()">📞 Call Driver</button>
+        <button class="whatsapp" onclick="whatsappDriver()">💬 WhatsApp Driver</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>© 2025 Emergency Services</footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
